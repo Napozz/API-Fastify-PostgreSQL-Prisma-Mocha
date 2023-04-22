@@ -1,0 +1,31 @@
+{
+    "name": "Node.js",
+    "dockerComposeFile": [
+        "./docker-compose.yml"
+    ],
+    "service": "app",
+    "workspaceFolder": "/workspace/api",
+    "runServices": [
+        "db",
+        "app"
+    ],
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash"
+            }
+        }
+    },
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "christian-kohler.path-intellisense",
+        "humao.rest-client",
+        "sleistner.vscode-fileutils",
+        "codezombiech.gitignore",
+        "Prisma.prisma",
+        "wix.vscode-import-cost"
+    ],
+    "remoteUser": "node"
+}

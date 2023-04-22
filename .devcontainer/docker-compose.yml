@@ -1,0 +1,42 @@
+version: '3.9'
+
+networks:
+  api-net:
+    name: api-net
+
+volumes:
+  api-db:
+    name: api-db
+
+services:
+  app:
+    container_name: api-app
+    build: 
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    volumes:
+      - "..:/workspace/api"
+    networks:
+      - api-net
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+  
+  db:
+    container_name: api-db
+    image: "postgres"
+    restart: unless-stopped
+    ports:
+      - "55432:5432"
+    volumes:
+      - "api-db:/var/lib/postgresql/data"
+    environment:
+      - POSTGRE_PASSWORD=azerty
+      - POSTGRE_USER=toto
+      - POSTGRE_DB=api-db
+    networks:
+      - api-net

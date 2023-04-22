@@ -1,0 +1,39 @@
+{
+  "name": "api-fastify-postgresql-prisma-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./dist/app.js",
+    "dev": "npm run build && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Napoz/API-Fastify-PostgreSQL-Prisma-Mocha.git"
+  },
+  "keywords": [
+    "API",
+    "Fastify",
+    "PostgreSQL",
+    "Prisma",
+    "Mocha",
+    "Typescript"
+  ],
+  "author": "Napozz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Napoz/API-Fastify-PostgreSQL-Prisma-Mocha/issues"
+  },
+  "homepage": "https://github.com/Napoz/API-Fastify-PostgreSQL-Prisma-Mocha#readme",
+  "dependencies": {
+    "@prisma/client": "^4.13.0",
+    "fastify": "^4.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "prisma": "^4.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
