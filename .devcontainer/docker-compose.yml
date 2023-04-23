@@ -35,8 +35,8 @@ services:
     volumes:
       - "api-db:/var/lib/postgresql/data"
     environment:
-      - POSTGRE_PASSWORD=azerty
-      - POSTGRE_USER=toto
-      - POSTGRE_DB=api-db
+      - POSTGRES_PASSWORD=azerty
+      - POSTGRES_USER=toto
+      - POSTGRES_DB=api-db
     networks:
       - api-net

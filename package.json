@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node ./dist/app.js",
-    "dev": "npm run build && npm start"
+    "dev": "npm run build && npm start",
+    "test": "mocha --require ts-node/register ./test/*.spec.ts --exit"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,13 @@
   "homepage": "https://github.com/Napoz/API-Fastify-PostgreSQL-Prisma-Mocha#readme",
   "dependencies": {
     "@prisma/client": "^4.13.0",
-    "fastify": "^4.15.0"
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/supertest": "^2.0.12",
+    "chai": "^4.3.7",
+    "fastify": "^4.15.0",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
   },
   "devDependencies": {
     "@types/node": "^18.15.13",

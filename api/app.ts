@@ -13,3 +13,5 @@ app.listen({port: 8808}, (err, address) => {
 
     console.log(`Server listenning at ${address}`);
 });
+
+export { app };
