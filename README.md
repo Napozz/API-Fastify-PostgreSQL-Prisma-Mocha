@@ -1,5 +1,5 @@
 # API-Fastify-PostgreSQL-Prisma-Mocha
 
-sur vscode installer l'extension devcontainer et lancé build et open in container
+Sur vscode installer l'extension devcontainer et lancer:>Dev container: build et open in container.
 
 npm i
